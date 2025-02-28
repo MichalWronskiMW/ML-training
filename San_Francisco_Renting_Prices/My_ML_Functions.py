@@ -6,7 +6,7 @@ import scipy.stats as stats
 import statsmodels.api as sm
 
 from sklearn.model_selection import train_test_split, KFold
-from sklearn.metrics import r2_score as r2, mean_absolute_error as mae, mean_squared_error as mse
+from sklearn.metrics import r2_score as r2, mean_absolute_error as mae, root_mean_squared_error as rmse
 from sklearn.linear_model import Ridge
 
 
@@ -50,12 +50,12 @@ def reg_cross_validate_model(X, y, n_splits=5):
         # Calculate metrics for the training set
         r2_train = r2(y_train, y_train_pred)
         mae_train = mae(y_train, y_train_pred)
-        rmse_train = np.sqrt(mse(y_train, y_train_pred))
+        rmse_train = rmse(y_train, y_train_pred)
         
         # Calculate metrics for the test set
         r2_test = r2(y_test, y_test_pred)
         mae_test = mae(y_test, y_test_pred)
-        rmse_test = np.sqrt(mse(y_test, y_test_pred))
+        rmse_test = rmse(y_test, y_test_pred)
         
         # Append computed metrics to the lists
         train_r2_list.append(r2_train)
@@ -91,7 +91,7 @@ def reg_cross_validate_model(X, y, n_splits=5):
     # Evaluate final model metrics on the entire dataset
     y_final_pred = final_model.predict(X_with_const)
     final_mae = mae(y, y_final_pred)
-    final_rmse = np.sqrt(mse(y, y_final_pred))
+    final_rmse = rmse(y, y_final_pred)
     print()
     print("Final Model Metrics on the Entire Dataset:")
     print(f"  MAE: {final_mae:.3f}")
