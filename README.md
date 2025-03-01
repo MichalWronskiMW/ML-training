@@ -2,7 +2,7 @@
 Collection of ML projects using various databases with insights.
 
 
-## San Francisco Renting Prices 🌉
+## San Francisco Renting Prices 🌉 [Regression]
 
 This repository contains a Python Jupyter notebook that was used to build and evaluate regression models to predict rental prices in San Francisco. The notebook employed various regression techniques, including OLS (Ordinary Least Squares) and Ridge Regression, to predict the price of rentals based on features such as square footage, number of bedrooms, and neighborhood.
 
