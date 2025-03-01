@@ -23,4 +23,4 @@ Residuals and other diagnostics were plotted to ensure that the model assumption
 Python: NumPy, Pandas, Statsmodels, Scikit Learn, Matplotlib, Seaborn and SciPy.
 
 ### Used statistical and modeling methods: 
-Descriptive Statistics, Shapiro-Wilk Test, Log Transformation, Feature Engineering, OLS Linear Regression, Ridge Regression
+Descriptive Statistics, Shapiro-Wilk Test, Log Transformation, Feature Engineering, OLS Linear Regression, Standarization, VIF Verification, Ridge Regression
